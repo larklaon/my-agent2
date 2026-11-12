@@ -1,6 +1,16 @@
-#	app.py
 import streamlit as st
+from dotenv import load_dotenv
 
-st.title("My Streamlit App")
+load_dotenv()
 
-st.write("Welcome to my Streamlit application! This is a simple app that demonstrates the capabilities of Streamlit for building interactive web applications with Python.")
+st.set_page_config(page_title="Streamlit 실습")
+
+page = st.navigation(
+    [
+        st.Page("page_1.py", title="챗봇", icon="1️⃣"),
+        st.Page("page_2.py", title="엑셀 미리보기", icon="2️⃣"),
+        st.Page("page_3.py", title="환율 조회", icon="3️⃣"),
+    ],
+    position="top",
+)
+page.run()
