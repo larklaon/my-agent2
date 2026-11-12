@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-st.set_page_config(page_title="Streamlit 실습")
+st.set_page_config(page_title="아주대학교 부트 캠프")
 
 page = st.navigation(
     [
